@@ -147,5 +147,17 @@ SWYNEX-AI-Problem-Design/
 - [ ] (Next tasks) Implementation, results and demo
 
 ---
+## System Overview
+
+```mermaid
+flowchart LR
+    A[Customer Email] --> B[Text Cleaning]
+    B --> C[Classifier]
+    C --> D{Confidence ≥ 70%?}
+    D -- Yes --> E[Predicted Category]
+    D -- No --> F[Human Agent Review]
+    E --> G[Right Support Team]
+    F --> G
+```
 
 *Submitted as part of the SWYNEX Technologies internship program. #SWYNEX #Internship*
